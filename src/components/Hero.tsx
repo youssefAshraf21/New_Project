@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import {codeExamples} from '../data/codeExamples';
+import {codeExamples, floatingCards} from '../data/codeExamples';
 
 function Hero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [activeTap , setActiveTap] = useState("App.jsx");
-
+    const currentFloatingCard = floatingCards[activeTap];
     useEffect(() => {
         function handleMouseMove(e: MouseEvent) {
             setMousePosition({ x: e.clientX, y: e.clientY });
@@ -95,11 +95,31 @@ function Hero() {
                                 </div>
                                 {/* Code */}
                                 <div className='relative overflow-hidden grow'>
-                                        <SyntaxHighlighter language="jsx" style={vscDarkPlus}>
+                                        <SyntaxHighlighter language="jsx" 
+                                        style={vscDarkPlus} 
+                                        customStyle=
+                                        {{
+                                            margin: 0 ,
+                                            padding: 4,
+                                            fontSize: 11,
+                                            lineHeight: 1.4 ,
+                                            height: "100%",
+                                            border: "1px solid #3c3c3c"
+                                        }}>
                                             {codeExamples[activeTap]}
                                         </SyntaxHighlighter>
                                 </div>
                             </div>
+                        </div>
+                        {/* card float */}
+                        <div className={` hidden lg:block absolute bottom-4 right-4 transform translate-x-8 translate-y-8 ${floatingCards[activeTap].bgColor} backdrop-blur-xl rounded-lg p-4 border border-white/15 shadow-2xl    `}>
+                                <div className='flex items-center space-x-2 mb-2 '>
+                                    <div className={`w-6 h-6 ${floatingCards[activeTap].iconColor} flex items-center justify-center text-sm font-bold`}>
+                                        {currentFloatingCard.icon}
+                                    </div>
+                                    <span className={`text-sm font-medium ${currentFloatingCard.textColor}`}>{currentFloatingCard.title}</span>
+                                </div>
+                                <div className={`text-sm text   -left ${currentFloatingCard.contentColor}`}>{currentFloatingCard.content}</div>
                         </div>
                     </div>
                 </div>

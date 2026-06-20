@@ -10,7 +10,7 @@
 
     export const codeExamples: Record<string, string> = {
     "App.jsx": `import { useState } from "react";
-    import { CodeFlow } from "@codeflow/ai";
+import { CodeFlow } from "@codeflow/ai";
 
     function App() {
     const [code, setCode] = useState("");
@@ -31,7 +31,7 @@
     }`,
 
     "Hero.jsx": `import { useState, useEffect } from "react";
-    import { CodeFlow } from "@codeflow/ai";
+import { CodeFlow } from "@codeflow/ai";
 
     export default function Hero() {
     const [isTyping, setIsTyping] = useState(false);
@@ -61,7 +61,7 @@
     }`,
 
     "Navbar.jsx": `import { useState } from "react";
-    import { CodeFlow } from "@codeflow/ai";
+import { CodeFlow } from "@codeflow/ai";
 
     export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
