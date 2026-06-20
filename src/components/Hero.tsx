@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { GoDotFill } from "react-icons/go";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
