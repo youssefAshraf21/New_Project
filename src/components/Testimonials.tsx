@@ -34,7 +34,7 @@ type Testimonial = {
 function Testimonials() {
     return (
             <section
-        id="testimonials"
+        id="Testimonials"
         className="py-16 sm:py-20 px-10 sm:px-6 lg:px-8 relative"
         >
         <div className="max-w-7xl mx-auto">
