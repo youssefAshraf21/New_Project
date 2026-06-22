@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 import { FiMenu } from "react-icons/fi";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MdClose } from "react-icons/md";
 
 function Navbar() {

@@ -91,7 +91,7 @@ function Pricing() {
                                 <div className="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none rounded-lg" />
                                 {plan.mostPopular && (
                                     <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 z-10">
-                                        <div className="flex items-center space-x-1 px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
+                                        <div className="flex items-center space-x-1 px-3 sm:px-4 py-1 sm:py-1.5 bg-linear-to-b from-blue-500 to-cyan-500 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
                                             <FaRegStar className="w-3 h-3 sm:w-3 sm:h-3 fill-white" />
                                             <span>Most Popular</span>
                                         </div>
@@ -101,7 +101,7 @@ function Pricing() {
                                     <h3 className="text-xl sm:text-2xl font-bold mb-2">{plan.name}</h3>
                                     <p className="text-gray-400 text-Xm sm:text-sm mb-3 sm:mb-4">{plan.description}</p>
                                     <div className="flex items-baseline justify-center">
-                                        <span className="text-3xl sm:text-4xl lg:text-5xl font-bold  bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text 
+                                        <span className="text-3xl sm:text-4xl lg:text-5xl font-bold  bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text 
                                         text-transparent">
                                                         ${plan.price}
                                         </span>
